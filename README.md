@@ -22,8 +22,8 @@ Before running the script, make sure you have installed the necessary dependenci
 npm install
 ```
 
-### 4. Run the Script
-To start the script, run the following command:
+### 4. Run the Scraper Script
+To start the screenshot scraping process, run the following command:
 ```
 node index.js
 ```
@@ -41,23 +41,35 @@ Use any tool to get the exact coordinates for the screenshot area you want to ca
 - Press `g` again to **stop** the script once you’ve captured enough pages.
 
 ### 7. How the Script Works
-The script is designed to:
+The script will:
 1. **Take a screenshot** of the selected area.
 2. **Save the screenshot** to your local storage.
 3. **Flip to the next page** by simulating the right arrow key (`→`) press.
 
-### Notes
-- Make sure the book page you want to capture is open and fully visible on your screen before running the script.
-- The script will continue capturing pages and saving them as screenshots until you stop it.
+### 8. Combine Screenshots into a PDF
+Once you've captured all your screenshots, you can use the `combine.py` script in the repository to combine them into a single **PDF** file. Here's how to use it:
 
+1. Ensure you have **Python** installed on your system.
+2. Run the following command to combine all screenshots into a **PDF** file:
+   ```
+   python combine.py
+   ```
+3. The output will be a `.pdf` file containing all the screenshots.
+
+### Notes for Combining Screenshots:
+- Ensure all screenshots are in the same directory as the `combine.py` script.
+- The script will automatically order the screenshots in the filename sequence (`screenshot-1.png`, `screenshot-2.png`, etc.).
+  
 ## Requirements
 - Node.js (v12 or higher)
+- Python (for `combine.py`)
 - Any web browser with the book loaded
 
 ## Example Usage
 1. Open the book page you want to scrape.
 2. Start the script with the `g` key.
 3. Stop it when you’ve captured all the pages you need.
+4. Run the `combine.py` script to combine the screenshots into a PDF.
 
 ## License
 This project is open source and available under the MIT License.
